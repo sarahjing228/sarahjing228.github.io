@@ -43,6 +43,23 @@
     });
   });
 
+  const experienceMap = document.querySelector('.experience-map-layout');
+  if (experienceMap) {
+    experienceMap.addEventListener('click', (event) => {
+      const pin = event.target.closest('.map-pin');
+      if (!pin) return;
+      const place = pin.dataset.place;
+      experienceMap.querySelectorAll('.map-pin').forEach((item) => {
+        const active = item === pin;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      experienceMap.querySelectorAll('.map-detail').forEach((detail) => {
+        detail.classList.toggle('active', detail.dataset.place === place);
+      });
+    });
+  }
+
   document.querySelector('#year').textContent = new Date().getFullYear();
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('visible'));

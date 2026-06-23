@@ -104,13 +104,26 @@
         <div><p class="section-label">Experience & Education</p><h2>The path to my current research</h2></div>
         <p>Medical imaging, mathematics, data science, and visual computing across four universities.</p>
       </div>
-      <!-- EDIT HERE: Update dates, descriptions, and school badges as your experience grows. -->
-      <div class="experience-list">
-        <article class="experience-item"><div class="school-badge naist-badge" aria-hidden="true"><img src="assets/images/institutions/naist.png" alt=""></div><div><h3>Ph.D. Student — Biomedical Image Intelligence Lab, NAIST</h3><p class="experience-meta"><time datetime="2026-04">Apr. 2026</time> – Present · Nara, Japan</p><p>Researching federated learning and medical image analysis, with a focus on quantitative musculoskeletal CT analysis, segmentation, and privacy-preserving multi-institutional learning.</p></div></article>
-        <article class="experience-item"><div class="school-badge kit-badge" aria-hidden="true"><img src="assets/images/institutions/kit.png" alt=""></div><div><h3>Exchange Student — Karlsruhe Institute of Technology</h3><p class="experience-meta"><time datetime="2025-10">Oct. 2025</time> – <time datetime="2026-03">Mar. 2026</time> · Karlsruhe, Germany</p><p>Studied computer graphics and related topics, including image denoising, ray tracing, and visual computing. This experience broadened my interest in geometric representations and image formation.</p></div></article>
-        <article class="experience-item"><div class="school-badge naist-badge" aria-hidden="true"><img src="assets/images/institutions/naist.png" alt=""></div><div><h3>Master’s Student — Nara Institute of Science and Technology</h3><p class="experience-meta"><time datetime="2024-04">Apr. 2024</time> – <time datetime="2026-03">Mar. 2026</time> · Nara, Japan</p><p>Completed graduate study in data science, with research experience in biomedical data analysis and medical AI.</p></div></article>
-        <article class="experience-item"><div class="school-badge osaka-badge" aria-hidden="true">OU</div><div><h3>Research Student — Faculty of Medicine, Osaka University</h3><p class="experience-meta">Before NAIST · Osaka, Japan</p><p>Gained early research experience in a medical-school environment and developed an interest in applying computational methods to healthcare problems.</p></div></article>
-        <article class="experience-item"><div class="school-badge waterloo-badge" aria-hidden="true"><img src="assets/images/institutions/university-of-waterloo.png" alt=""></div><div><h3>Bachelor’s Student — University of Waterloo</h3><p class="experience-meta">Waterloo, Canada</p><p>Studied Mathematics and built a foundation in analytical thinking, modeling, and quantitative problem solving.</p></div></article>
+      <!-- EDIT HERE: Add a new .map-pin and .map-detail when your academic path grows. -->
+      <div class="experience-map-layout">
+        <div class="experience-map" aria-label="Academic path map">
+          <div class="map-globe" aria-hidden="true">
+            <span class="map-line line-waterloo-osaka"></span>
+            <span class="map-line line-osaka-nara"></span>
+            <span class="map-line line-nara-kit"></span>
+            <span class="map-line line-kit-nara"></span>
+          </div>
+          <button class="map-pin waterloo-pin active" type="button" data-place="waterloo" aria-pressed="true"><span>Waterloo</span></button>
+          <button class="map-pin osaka-pin" type="button" data-place="osaka" aria-pressed="false"><span>Osaka</span></button>
+          <button class="map-pin nara-pin" type="button" data-place="nara" aria-pressed="false"><span>Nara</span></button>
+          <button class="map-pin kit-pin" type="button" data-place="kit" aria-pressed="false"><span>KIT</span></button>
+        </div>
+        <div class="map-details">
+          <article class="map-detail active" data-place="waterloo"><div class="school-badge waterloo-badge" aria-hidden="true"><img src="assets/images/institutions/university-of-waterloo.png" alt=""></div><div><span class="experience-place">Waterloo, Canada</span><h3>Bachelor’s Student — University of Waterloo</h3><p class="experience-meta">Mathematics</p><p>Studied Mathematics and built a foundation in analytical thinking, modeling, probability, optimization, and quantitative problem solving. This background still shapes how I think about medical images, geometry, and machine learning systems.</p></div></article>
+          <article class="map-detail" data-place="osaka"><div class="school-badge osaka-badge" aria-hidden="true">OU</div><div><span class="experience-place">Osaka, Japan</span><h3>Research Student — Faculty of Medicine, Osaka University</h3><p class="experience-meta">Before NAIST</p><p>Gained early research experience in a medical-school environment and became interested in applying computational methods to healthcare problems, especially where clinical data, imaging, and statistical reasoning meet.</p></div></article>
+          <article class="map-detail" data-place="nara"><div class="school-badge naist-badge" aria-hidden="true"><img src="assets/images/institutions/naist.png" alt=""></div><div><span class="experience-place">Nara, Japan</span><h3>NAIST — Master’s Student &amp; Ph.D. Student</h3><p class="experience-meta"><time datetime="2024-04">Apr. 2024</time> – Present</p><p>Completed master’s study in data science and now continue as a Ph.D. student at the Biomedical Image Intelligence Lab. My current work focuses on federated learning, medical image analysis, quantitative musculoskeletal CT analysis, segmentation, and privacy-preserving multi-institutional learning.</p></div></article>
+          <article class="map-detail" data-place="kit"><div class="school-badge kit-badge" aria-hidden="true"><img src="assets/images/institutions/kit.png" alt=""></div><div><span class="experience-place">Karlsruhe, Germany</span><h3>Exchange Student — Karlsruhe Institute of Technology</h3><p class="experience-meta"><time datetime="2025-10">Oct. 2025</time> – <time datetime="2026-03">Mar. 2026</time></p><p>Studied computer graphics and visual computing topics, including ray tracing, image denoising, rendering pipelines, and geometric representations. This experience made me more interested in the bridge between image formation, 3D structure, and medical image analysis.</p></div></article>
+        </div>
       </div>
     </section>
 
@@ -132,9 +145,9 @@
       </div>
       <!-- EDIT HERE: Add or revise research themes. -->
       <div class="card-grid research-grid">
-        <article class="card"><span class="card-number">Musculoskeletal Analysis</span><h3>Segmentation, tracking, and quantitative anatomy</h3><p>I develop automated pipelines for segmentation, tracking, and quantitative analysis of muscle, adipose tissue, bone, and related anatomical structures in 3D/4D clinical imaging, including CT and X-ray. The goal is to support longitudinal assessment of musculoskeletal health and body composition.</p></article>
-        <article class="card"><span class="card-number">Federated Learning</span><h3>Privacy-aware multi-institutional learning</h3><p>I investigate machine learning frameworks for distributed clinical datasets, with a focus on domain shift, site heterogeneity, robust evaluation, and multi-institutional deployment.</p></article>
-        <article class="card"><span class="card-number">Geometry, Rendering & Denoising</span><h3>Graphics-inspired medical image analysis</h3><p>I am interested in bridging computer graphics and medical imaging through geometric representations, surface reconstruction, image denoising, and rendering-inspired methods for medical image analysis.</p></article>
+        <article class="card research-card"><span class="card-number">quantitative anatomy</span><h3>Musculoskeletal Analysis</h3><p>I develop automated pipelines for segmentation, tracking, and quantitative analysis of muscle, adipose tissue, bone, and related anatomical structures in 3D/4D clinical imaging, including CT and X-ray. The goal is to support longitudinal assessment of musculoskeletal health and body composition.</p></article>
+        <article class="card research-card"><span class="card-number">privacy-aware AI</span><h3>Federated Learning</h3><p>I investigate machine learning frameworks for distributed clinical datasets, with a focus on domain shift, site heterogeneity, robust evaluation, and multi-institutional deployment.</p></article>
+        <article class="card research-card"><span class="card-number">graphics meets imaging</span><h3>Geometry, Rendering &amp; Denoising</h3><p>I am interested in bridging computer graphics and medical imaging through geometric representations, surface reconstruction, image denoising, and rendering-inspired methods for medical image analysis.</p></article>
       </div>
     </section>
 
