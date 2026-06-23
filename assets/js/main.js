@@ -45,19 +45,55 @@
 
   const experienceMap = document.querySelector('.experience-map-layout');
   if (experienceMap) {
-    experienceMap.addEventListener('click', (event) => {
-      const pin = event.target.closest('.map-pin');
-      if (!pin) return;
-      const place = pin.dataset.place;
-      experienceMap.querySelectorAll('.map-pin').forEach((item) => {
-        const active = item === pin;
+    const activatePlace = (place) => {
+      experienceMap.querySelectorAll('.map-location').forEach((item) => {
+        const active = item.dataset.place === place;
         item.classList.toggle('active', active);
         item.setAttribute('aria-pressed', String(active));
       });
       experienceMap.querySelectorAll('.map-detail').forEach((detail) => {
         detail.classList.toggle('active', detail.dataset.place === place);
       });
+    };
+
+    experienceMap.addEventListener('click', (event) => {
+      const locationButton = event.target.closest('.map-location');
+      if (!locationButton) return;
+      activatePlace(locationButton.dataset.place);
     });
+
+    if (window.jsVectorMap && document.querySelector('#academic-map')) {
+      const academicMarkers = [
+        { name: 'Waterloo', coords: [43.4723, -80.5449], place: 'waterloo' },
+        { name: 'Osaka', coords: [34.6937, 135.5023], place: 'osaka' },
+        { name: 'NAIST M.S.', coords: [34.732, 135.735], place: 'nara-master' },
+        { name: 'KIT', coords: [49.0069, 8.4037], place: 'kit' },
+        { name: 'NAIST Ph.D.', coords: [34.704, 135.82], place: 'nara-phd' }
+      ];
+      new jsVectorMap({
+        selector: '#academic-map',
+        map: 'world',
+        markers: academicMarkers,
+        zoomButtons: false,
+        zoomOnScroll: false,
+        regionStyle: {
+          initial: { fill: '#dbeafe', stroke: '#ffffff', strokeWidth: .6 },
+          hover: { fill: '#bfdbfe' }
+        },
+        markerStyle: {
+          initial: { fill: '#db2777', stroke: '#ffffff', strokeWidth: 3, r: 7 },
+          hover: { fill: '#f472b6', stroke: '#ffffff', strokeWidth: 3, r: 9 }
+        },
+        labels: {
+          markers: {
+            render(marker) { return marker.name; }
+          }
+        },
+        onMarkerClick(event, index) {
+          activatePlace(academicMarkers[index].place);
+        }
+      });
+    }
   }
 
   document.querySelector('#year').textContent = new Date().getFullYear();

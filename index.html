@@ -7,7 +7,10 @@
   <meta name="color-scheme" content="light dark">
   <title>Sarah Jing</title>
   <link rel="icon" href="assets/images/site-icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -104,20 +107,17 @@
         <div><p class="section-label">Academic Journey</p><h2>Experience &amp; Education</h2></div>
         <p>The path to my current research across medical imaging, mathematics, data science, and visual computing.</p>
       </div>
-      <!-- EDIT HERE: Add a new .map-pin and .map-detail when your academic path grows. -->
+      <!-- EDIT HERE: Add a new .map-location button, jsVectorMap marker, and .map-detail when your academic path grows. -->
       <div class="experience-map-layout">
-        <div class="experience-map" aria-label="Academic journey global map">
-          <div class="map-plane" aria-hidden="true">
-            <span class="map-line line-waterloo-osaka"></span>
-            <span class="map-line line-osaka-nara-master"></span>
-            <span class="map-line line-nara-kit"></span>
-            <span class="map-line line-kit-nara-phd"></span>
+        <div class="experience-map" aria-label="Academic journey world map">
+          <div id="academic-map" class="vector-map" aria-hidden="true"></div>
+          <div class="map-location-buttons" aria-label="Academic journey locations">
+            <button class="map-location active" type="button" data-place="waterloo" aria-pressed="true">Waterloo</button>
+            <button class="map-location" type="button" data-place="osaka" aria-pressed="false">Osaka</button>
+            <button class="map-location" type="button" data-place="nara-master" aria-pressed="false">NAIST M.S.</button>
+            <button class="map-location" type="button" data-place="kit" aria-pressed="false">KIT</button>
+            <button class="map-location" type="button" data-place="nara-phd" aria-pressed="false">NAIST Ph.D.</button>
           </div>
-          <button class="map-pin waterloo-pin active" type="button" data-place="waterloo" aria-pressed="true"><span>Waterloo</span></button>
-          <button class="map-pin osaka-pin" type="button" data-place="osaka" aria-pressed="false"><span>Osaka</span></button>
-          <button class="map-pin nara-master-pin" type="button" data-place="nara-master" aria-pressed="false"><span>NAIST M.S.</span></button>
-          <button class="map-pin kit-pin" type="button" data-place="kit" aria-pressed="false"><span>KIT</span></button>
-          <button class="map-pin nara-phd-pin" type="button" data-place="nara-phd" aria-pressed="false"><span>NAIST Ph.D.</span></button>
         </div>
         <div class="map-details">
           <article class="map-detail active" data-place="waterloo"><div class="school-badge waterloo-badge" aria-hidden="true"><img src="assets/images/institutions/university-of-waterloo.png" alt=""></div><div><span class="experience-place">Waterloo, Canada</span><h3>Bachelor’s Student — University of Waterloo</h3><p class="experience-meta">Mathematics</p><p>Studied Mathematics and built a foundation in analytical thinking, modeling, probability, optimization, and quantitative problem solving. This background still shapes how I think about medical images, geometry, and machine learning systems.</p></div></article>
