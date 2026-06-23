@@ -64,12 +64,11 @@
 
     if (window.jsVectorMap && document.querySelector('#academic-map')) {
       const academicMarkers = [
-        { name: 'Xi’an', coords: [34.3416, 108.9398], place: 'xian' },
+        { name: 'Shaanxi · Xi’an', coords: [34.3416, 108.9398], place: 'xian' },
         { name: 'Waterloo', coords: [43.4723, -80.5449], place: 'waterloo' },
         { name: 'Osaka', coords: [34.6937, 135.5023], place: 'osaka' },
-        { name: 'NAIST M.S.', coords: [34.732, 135.735], place: 'nara-master' },
-        { name: 'KIT', coords: [49.0069, 8.4037], place: 'kit' },
-        { name: 'NAIST Ph.D.', coords: [34.704, 135.82], place: 'nara-phd' }
+        { name: 'Nara', coords: [34.6851, 135.8048], place: 'nara-master' },
+        { name: 'Karlsruhe · Exchange', coords: [49.0069, 8.4037], place: 'kit' }
       ];
       new jsVectorMap({
         selector: '#academic-map',
