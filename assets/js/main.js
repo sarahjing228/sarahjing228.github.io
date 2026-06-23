@@ -64,6 +64,7 @@
 
     if (window.jsVectorMap && document.querySelector('#academic-map')) {
       const academicMarkers = [
+        { name: 'Xi’an', coords: [34.3416, 108.9398], place: 'xian' },
         { name: 'Waterloo', coords: [43.4723, -80.5449], place: 'waterloo' },
         { name: 'Osaka', coords: [34.6937, 135.5023], place: 'osaka' },
         { name: 'NAIST M.S.', coords: [34.732, 135.735], place: 'nara-master' },
