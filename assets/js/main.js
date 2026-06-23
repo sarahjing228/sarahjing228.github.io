@@ -65,8 +65,8 @@
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      vx: (Math.random() - .5) * .55,
-      vy: (Math.random() - .5) * .55,
+      vx: (Math.random() - .5) * 1.45,
+      vy: (Math.random() - .5) * 1.45,
       r: Math.random() * 2.2 + .7
     }));
   }
