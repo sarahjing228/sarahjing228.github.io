@@ -1,0 +1,15 @@
+.diary-header { width: min(1040px, calc(100% - 2rem)); margin: 0 auto; padding: 1.4rem 0; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.diary-header a { color: var(--muted); text-decoration: none; font-size: .85rem; font-weight: 700; }
+.diary-shell { width: min(1040px, calc(100% - 2rem)); margin: 0 auto; padding: 6rem 0 4rem; }
+.diary-kicker { color: var(--accent); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 750; }
+.diary-shell h1 { max-width: 880px; font-size: clamp(3.2rem, 9vw, 7rem); margin: 1rem 0 1.5rem; }
+.diary-intro { max-width: 680px; color: var(--muted); font-size: 1.2rem; }
+.diary-shell figure { margin: 4rem 0; }
+.diary-photo { display: block; width: 100%; max-height: 680px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
+.diary-shell figcaption { margin-top: .65rem; color: var(--muted); font-size: .72rem; text-align: right; }
+.diary-shell article { width: min(680px, 100%); margin: 0 auto; }
+.diary-shell article p { color: var(--muted); font-size: 1.08rem; }
+.diary-shell article h2 { font-family: inherit; font-size: 1.5rem; font-weight: 750; margin-top: 3rem; }
+.diary-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 6rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.diary-nav a { color: var(--accent); font-weight: 750; text-decoration: none; }
+@media (max-width: 600px) { .diary-shell { padding-top: 4rem; } .diary-shell figure { margin: 2.5rem 0; } .diary-photo { min-height: 300px; } }

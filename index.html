@@ -1,399 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
-  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/72387477?v=4">
-  <title>Sarah Jing | Research, Travel, Blog</title>
-  <style>
-.markdown-container img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.markdown-container h2 {
-  font-weight: bold;
-}
-
-.markdown-container ul {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-}
-
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sarah Jing — Ph.D. student at the NAIST Biomedical Image Intelligence Lab working on federated learning and quantitative musculoskeletal CT analysis.">
+  <meta name="color-scheme" content="light dark">
+  <title>Sarah Jing | Biomedical Image Intelligence</title>
+  <link rel="icon" href="assets/images/site-icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="bg-white relative">
-<style>
-/* Add necessary dark mode styles for the footer */
-.dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
-  background-color: #333333;
-}
-.dark-mode {
-  background-color: #1a1a1a;
-}
-.dark-mode footer,
-.dark-mode footer .text-gray-600 {
-  color: #f8f8f8;
-}
-    .dark-mode .text-white,
-    .dark-mode .text-black,
-    .dark-mode .text-gray-900,
-    .dark-mode h1,
-    .dark-mode h2,
-    .dark-mode h3,
-    .dark-mode h4,
-    .dark-mode .bg-white .card-content,
-    .dark-mode .bg-white div {
-      color: #f8f8f8;
-    }
-    .dark-mode .bg-white {
-      background-color: #1a1a1a;
-    }
-    .dark-mode .shadow-md {
-      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
-    }
-  </style>
-  <div id="particles-js"></div>
-<nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
-    <div>
-      <span class="text-black font-bold">sarahjing.github.io</span><span class="text-black"></span>
-    </div>
-    <button id="dark-mode-toggle" class="ml-4 p-2  text-black rounded shadow-md">🌓</button>
-  </nav>
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    <div id="header-container" class="px-4 py-5 mt-8 space-x-4">
-      <h1 class="text-8xl font-bold mb-10">Sarah Jing</h1>
-      <h2 class="text-xl mb-3">
-        Researcher, builder, traveler, and curious observer
-        <br><b>Computer vision, graphics, publications, travel notes, and food stories</b>
-      </h2>
-      <div class="flex space-x-4">
-        <a href="https://www.linkedin.com/in/sihuan-sarah-jing-6704a4126/" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-linkedin"></i></a>
-        <!-- <a href="https://twitter.com/tobias_digital" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-x-twitter"></i></a> -->
-        <!-- <a href="https://www.reddit.com/user/tobias_digital" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-reddit"></i></a>
-        <a href="https://github.com/tobwil" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-github"></i></a> -->
-        <a href="mailto:sarahjing228@gmail.com" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fas fa-envelope"></i></a>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Sarah Jing, home">sarahjing.github.io</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#study-blog">Study Blog</a>
+      <a href="#travel">Travel</a>
+      <a href="#photography">Photography</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">◐</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <p class="eyebrow">PhD student, researcher, photographer, and curious observer</p>
+      <div class="hero-title"><img src="assets/images/site-icon.png" alt="Medical imaging camera icon"><h1>Sarah Jing</h1></div>
+      <p class="hero-copy">PhD student at the NAIST Biomedical Image Intelligence Lab.<br><strong>Federated learning, medical image analysis, musculoskeletal CT, study notes, photography, and travel stories.</strong></p>
+      <div class="hero-actions">
+        <a class="button primary" href="#research">Explore my research</a>
+        <a class="button secondary" href="#contact">Get in touch</a>
       </div>
-    </div>
-  </div>
-  <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
-    <div id="posts-container" class="w-full md:w-1/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-magnifying-glass"></i> Digital Endeavors</h3>
-      <h4 class="text-sm italic mb-4">Research notes, reflections, and small stories</h4>
-      <div id="posts-list" class="space-y-4">
-        <!-- Fetched Posts Markdown files will be displayed here -->
+      <div class="hero-socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/sihuan-sarah-jing-6704a4126/" target="_blank" rel="noreferrer">in</a>
+        <a href="https://github.com/sarahjing228" target="_blank" rel="noreferrer">gh</a>
+        <a href="mailto:sarahjing228@gmail.com">@</a>
       </div>
-    </div>
-    <div id="projects-container" class="w-full md:w-2/3 px-4 py-5 mb-5 md:mb-0">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-code"></i> Projects</h3>
-      <h4 class="text-sm italic mb-4">Discover what I do in my spare time</h4>
-      <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-wrap">
-        <!-- Fetched Projects Markdown files will be displayed here -->
+      <a class="scroll-cue" href="#about" aria-label="Continue to About">↓</a>
+    </section>
+
+    <!-- EDIT HERE: This compact index keeps the original template's three-column summary layout. -->
+    <section class="section-shell home-summary reveal" aria-label="Website summary">
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">⌕</p>
+        <h2>Research</h2>
+        <p class="summary-intro">Medical imaging, privacy-preserving learning, and quantitative CT analysis.</p>
+        <a href="#research"><strong>Current research interests</strong><span>Federated learning, segmentation, and musculoskeletal CT</span></a>
+        <a href="#publications"><strong>Scientific Reports</strong><span>Mortality prediction for pediatric fulminant myocarditis</span></a>
+      </article>
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">✎</p>
+        <h2>Study Blog</h2>
+        <p class="summary-intro">Notes from topics I am learning and revisiting.</p>
+        <a href="posts/?note=gan-learning-notes"><strong>How GANs Learn</strong><span>Objectives, instability, and medical images</span></a>
+        <a href="posts/?note=medical-image-segmentation"><strong>From Voxels to Meshes</strong><span>Segmentation types, geometry, and evaluation</span></a>
+        <a href="posts/?note=geometry-linear-algebra"><strong>Geometry &amp; Linear Algebra</strong><span>Transformations and visual representations</span></a>
+      </article>
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">◎</p>
+        <h2>Travel &amp; Photography</h2>
+        <p class="summary-intro">Places, food, light, and small observations collected along the way.</p>
+        <a href="travel/sicily-diary.html"><strong>Sicily Diary</strong><span>Marsala, regional pasta, and Mediterranean streets</span></a>
+        <a href="photography/strasbourg-2025-12/"><strong>Strasbourg at Christmas</strong><span>Winter lights and festive streets</span></a>
+        <a href="photography/dali-2026-04/"><strong>Dali · Yunnan</strong><span>Lake views, mountains, and quiet moments</span></a>
+      </article>
+    </section>
+
+    <section id="about" class="section-shell split-section reveal">
+      <div>
+        <p class="section-label">01 · About</p>
+        <h2>Curious about images, geometry, and how machines learn from both.</h2>
       </div>
-    </div> 
-  </div>
-    <script>
-      document.getElementById("dark-mode-toggle").addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-  
-        const toggleBtn = document.getElementById("dark-mode-toggle");
-        const isDarkModeOn = document.body.classList.contains("dark-mode");
-  
-        toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
-      });
-    </script>
-    <div id="listening-container" class="w-full px-4 py-5">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fab fa-spotify"></i> What's on my Playlist</h3>
-      <div id="listening-list" class="flex flex-wrap mx-auto md:-mx-2 md:space-x-4">
-        <!-- Fetched Listening Markdown files will be displayed here -->
+      <div class="prose">
+        <!-- EDIT HERE: Update your biography and affiliation. -->
+        <p>I am a <strong>Ph.D. student at the Biomedical Image Intelligence Lab, Nara Institute of Science and Technology (NAIST)</strong>, where I work on medical image analysis and privacy-preserving learning. My current research focuses on federated learning for quantitative musculoskeletal CT analysis, with an emphasis on segmentation, cross-institutional generalization, and clinically meaningful imaging biomarkers.</p>
+        <p>I am interested in how medical imaging methods can remain reliable across different institutions, scanners, protocols, and patient populations. Beyond my central medical-imaging work, I am also curious about image denoising, computer graphics, ray tracing, geometric representations, and the path from segmented voxels to meaningful 3D anatomical structures.</p>
+        <p>My academic path began with bachelor’s studies in <strong>Mathematics at the University of Waterloo</strong>. I later joined the <strong>Faculty of Medicine at Osaka University</strong> as a research student, completed my master’s degree at <strong>NAIST</strong>, spent time at <strong>Karlsruhe Institute of Technology</strong> in Germany as an exchange student, and now continue my research at NAIST as a Ph.D. student.</p>
+        <p>Outside the lab, I enjoy <strong>photography, bouldering, tennis, travel, and exploring local food</strong>. I like collecting small observations from unfamiliar places and learning topics that sit slightly beyond my current research—especially when they connect visual understanding, geometry, and real-world systems.</p>
+        <div class="quick-facts" aria-label="At a glance"><span>📍 Nara, Japan</span><span>◉ Photography</span><span>🧗 Bouldering</span><span>🎾 Tennis</span><span>✈ Travel &amp; food</span></div>
       </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-  <script>
-      const postsList = document.getElementById('posts-list');
-    const projectsList = document.getElementById('projects-list');
-    const converter = new showdown.Converter({
-      simpleLineBreaks: true,
-      strikethrough: true,
-      tables: true,
-    });
-    const baseUrl = "https://api.github.com/repos/tobwil/markdown_website/contents/";
-    const folders = ['posts', 'projects', 'listening'];
+    </section>
 
-    async function fetchMarkdownFiles(folder) {
-      const response = await fetch(`${baseUrl}${folder}`);
-      const files = await response.json();
-      function shuffleArray(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [array[i], array[j]] = [array[j], array[i]];
-          }
-          return array;
-      }
+    <section id="experience" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">02 · Experience & Education</p><h2>The path to my current research</h2></div>
+        <p>Medical imaging, mathematics, data science, and visual computing across four universities.</p>
+      </div>
+      <!-- EDIT HERE: Update dates, descriptions, and school badges as your experience grows. -->
+      <div class="experience-list">
+        <article class="experience-item"><div class="school-badge naist-badge" aria-hidden="true"><img src="assets/images/institutions/naist.png" alt=""></div><div><h3>Ph.D. Student — Biomedical Image Intelligence Lab, NAIST</h3><p class="experience-meta"><time datetime="2026-04">Apr. 2026</time> – Present · Nara, Japan</p><p>Researching federated learning and medical image analysis, with a focus on quantitative musculoskeletal CT analysis, segmentation, and privacy-preserving multi-institutional learning.</p></div></article>
+        <article class="experience-item"><div class="school-badge kit-badge" aria-hidden="true"><img src="assets/images/institutions/kit.png" alt=""></div><div><h3>Exchange Student — Karlsruhe Institute of Technology</h3><p class="experience-meta"><time datetime="2025-10">Oct. 2025</time> – <time datetime="2026-03">Mar. 2026</time> · Karlsruhe, Germany</p><p>Studied computer graphics and related topics, including image denoising, ray tracing, and visual computing. This experience broadened my interest in geometric representations and image formation.</p></div></article>
+        <article class="experience-item"><div class="school-badge naist-badge" aria-hidden="true"><img src="assets/images/institutions/naist.png" alt=""></div><div><h3>Master’s Student — Nara Institute of Science and Technology</h3><p class="experience-meta"><time datetime="2024-04">Apr. 2024</time> – <time datetime="2026-03">Mar. 2026</time> · Nara, Japan</p><p>Completed graduate study in data science, with research experience in biomedical data analysis and medical AI.</p></div></article>
+        <article class="experience-item"><div class="school-badge osaka-badge" aria-hidden="true">OU</div><div><h3>Research Student — Faculty of Medicine, Osaka University</h3><p class="experience-meta">Before NAIST · Osaka, Japan</p><p>Gained early research experience in a medical-school environment and developed an interest in applying computational methods to healthcare problems.</p></div></article>
+        <article class="experience-item"><div class="school-badge waterloo-badge" aria-hidden="true"><img src="assets/images/institutions/university-of-waterloo.png" alt=""></div><div><h3>Bachelor’s Student — University of Waterloo</h3><p class="experience-meta">Waterloo, Canada</p><p>Studied Mathematics and built a foundation in analytical thinking, modeling, and quantitative problem solving.</p></div></article>
+      </div>
+    </section>
 
-      const randomFiles = shuffleArray(files);
-      const maxVisibleItems = folder === 'posts' ? 3 : folder === 'projects' ? 5 : Infinity;
-      let itemCount = 0;
+    <section id="news" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">03 · News</p><h2>Recent updates</h2></div>
+        <p>A small log of research and academic milestones.</p>
+      </div>
+      <!-- EDIT HERE: Add new items at the top of this list. -->
+      <div class="timeline">
+        <article><time datetime="2026">2026</time><p>Personal academic website launched. Research updates are coming soon.</p></article>
+        <article><time datetime="2025">2025</time><p>Ongoing work in federated quantitative musculoskeletal CT analysis.</p></article>
+      </div>
+    </section>
 
-      for (const file of randomFiles) {
-        if (file.name.endsWith('.md')) {
-          const fileRes = await fetch(file.download_url);
-          const mdContent = await fileRes.text();
-          const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
-          const htmlContent = converter.makeHtml(mdWithLineBreaks);
+    <section id="research" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">04 · Research</p><h2>Research interests</h2></div>
+        <p>Methods and applications at the intersection of machine learning and medical imaging.</p>
+      </div>
+      <!-- EDIT HERE: Add or revise research themes. -->
+      <div class="card-grid research-grid">
+        <article class="card"><span class="card-number">01</span><h3>Federated Learning</h3><p>Privacy-aware collaboration across distributed clinical datasets, with attention to domain shift and robust evaluation.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Musculoskeletal CT</h3><p>Automatic segmentation and quantitative analysis of muscle, fat, bone, and related anatomical structures in CT.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Imaging, Geometry & Rendering</h3><p>Segmentation, denoising, surface reconstruction, and an emerging interest in ray tracing and geometric representations.</p></article>
+      </div>
+    </section>
 
-          const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
-          const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
-          const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
-          const fileCard = `
-              <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
-                <h2 class="text-xl font-semibold mb-2">${title}</h2>
-                <div>${htmlContentWithoutTitle}</div>
-              </div>
-          `;
+    <section id="publications" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">05 · Publications</p><h2>Selected work</h2></div>
+      </div>
+      <!-- EDIT HERE: Replace this placeholder with publication citations and links. -->
+      <div class="publication-panel">
+        <article class="publication-item">
+          <span class="publication-year">2026 · Scientific Reports</span>
+          <!-- EDIT HERE: Add the full author list once you choose your preferred citation style. -->
+          <h3>Machine learning-based mortality prediction for pediatric fulminant myocarditis using cytokine profiles</h3>
+          <p>Sarah Jing and collaborators.</p>
+          <a href="https://www.nature.com/articles/s41598-026-50260-4" target="_blank" rel="noreferrer">Read in Scientific Reports ↗</a>
+        </article>
+        <span class="manuscripts">Additional selected publications and manuscripts in preparation will be updated here.</span>
+      </div>
+    </section>
 
-          if (itemCount < maxVisibleItems) {
-            if (folder === 'posts') {
-              postsList.innerHTML += fileCard;
-            } else if (folder === 'projects') {
-              projectsList.innerHTML += fileCard;
-            } else if (folder === 'listening') {
-              document.getElementById('listening-list').innerHTML += fileCard;
-            }
-          } else {
-            if (folder !== 'listening') {
-              const hiddenCard = `<div class='hidden'>${fileCard}</div>`;
-              if (folder === 'posts') {
-                postsList.innerHTML += hiddenCard;
-              } else if (folder === 'projects') {
-                projectsList.innerHTML += hiddenCard;
-              }
-            }
-          }
-          itemCount++;
-        }
-      }
+    <section id="study-blog" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">06 · Study Blog</p><h2>Learning in public</h2></div>
+        <p>Working notes on ideas, papers, and tools I want to understand more deeply.</p>
+      </div>
+      <!-- EDIT HERE: Add a card when you add a Markdown file to posts/. -->
+      <div class="card-grid blog-grid">
+        <a class="card link-card" href="posts/?note=gan-learning-notes"><span class="tag">Deep Learning</span><h3>How GANs Learn</h3><p>Generator, discriminator, objectives, instability, and what “realistic” should mean for medical images.</p><span class="card-link">Read study log →</span></a>
+        <a class="card link-card" href="posts/?note=medical-image-segmentation"><span class="tag">Medical Imaging</span><h3>Segmentation: From Voxels to Meshes</h3><p>Classification versus segmentation, segmentation types, 3D mesh generation, and meaningful medical evaluation.</p><span class="card-link">Read study log →</span></a>
+        <a class="card link-card" href="posts/?note=geometry-linear-algebra"><span class="tag">Mathematics</span><h3>Geometry & Linear Algebra for Imaging</h3><p>Vectors, transformations, coordinate systems, surfaces, and why geometry matters in imaging and graphics.</p><span class="card-link">Read study log →</span></a>
+      </div>
+    </section>
 
-    if (folder !== 'listening' && itemCount > maxVisibleItems) {
-      const container = folder === 'posts' ? postsList : projectsList;
-      createShowMoreButton(container);
-    }
-  }
+    <section id="travel" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">07 · Travel Diary</p><h2>Notes from elsewhere</h2></div>
+        <p>Places, details, and small moments worth remembering.</p>
+      </div>
+      <!-- EDIT HERE: Add diary cards and place photos in assets/images/travel/. -->
+      <div class="card-grid travel-grid">
+        <a class="travel-card sicily-card" href="travel/sicily-diary.html"><span>01</span><div><p>Sicily, Italy</p><h3>Stone streets, warm light, and the Mediterranean</h3><small>Read diary →</small></div></a>
+        <a class="travel-card japan-card" href="travel/japan-diary.html"><span>02</span><div><p>Japan</p><h3>Everyday scenes, quiet lanes, and changing seasons</h3><small>Read diary →</small></div></a>
+      </div>
+    </section>
 
-        const createShowMoreButton = (container) => {
-        const button = document.createElement('button');
-        button.innerHTML = '➕ Show More';
-        button.classList.add('show-more');
-        button.style.color = 'gray'; // Set the text color to gray
-        button.style.marginTop = '10px'; // Add some margin on top
-        container.after(button);
+    <section id="photography" class="section-shell reveal">
+      <div class="section-heading">
+        <div><p class="section-label">08 · Photography</p><h2>Light, place, and ordinary moments</h2></div>
+        <p>A growing visual notebook. These album spaces are ready for photographs I will add later.</p>
+      </div>
+      <!-- EDIT HERE: Replace album placeholders with photographs and links as each collection grows. -->
+      <div class="photo-albums">
+        <a class="photo-album sakura-album" href="photography/sakura-nara-2024-05/"><span>Spring in Nara</span><h3>Sakura · Nara</h3><p>6 photographs · View album →</p></a>
+        <a class="photo-album strasbourg-album" href="photography/strasbourg-2025-12/"><span>December 2025</span><h3>Strasbourg at Christmas</h3><p>5 photographs · View album →</p></a>
+        <article class="photo-album highlands-album"><span>April 2026</span><h3>Highlands</h3><p>Working title · easy to rename</p></article>
+        <a class="photo-album dali-album" href="photography/dali-2026-04/"><span>April 2026</span><h3>Dali · Yunnan</h3><p>8 photographs · View album →</p></a>
+      </div>
+    </section>
 
-        button.addEventListener('click', () => {
-            const hiddenItems = container.querySelectorAll('.hidden');
-            hiddenItems.forEach(item => item.classList.remove('hidden'));
-            button.remove();
-        });
-    };
+    <section id="contact" class="section-shell contact-section reveal">
+      <p class="section-label">09 · Contact</p>
+      <h2>Let’s talk about medical imaging, federated learning, or a possible collaboration.</h2>
+      <!-- EDIT HERE: Update email and profile links. -->
+      <div class="contact-links">
+        <a href="mailto:sarahjing228@gmail.com">sarahjing228@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sihuan-sarah-jing-6704a4126/" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/sarahjing228" rel="noreferrer" target="_blank">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
 
-    folders.forEach(folder => {
-        fetchMarkdownFiles(folder);
-    });
-  </script>
-  <script>
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: '#888888'
-        },
-        shape: {
-          type: 'circle',
-          stroke: {
-            width: 0,
-            color: '#000000'
-          },
-          polygon: {
-            nb_sides: 5
-          }
-        },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false,
-            speed: 40,
-            size_min: 0.1,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#888888',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 6,
-          direction: 'none',
-          random: false,
-          straight: false,
-          out_mode: 'out',
-          bounce: false,
-          attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-          }
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'repulse'
-          },
-          onclick: {
-            enable: false
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 400,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
-  <script src="https://unpkg.com/elevator.js"></script>
-  <script>
-    const elevator = new Elevator({
-      mainAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/elevator.mp3",
-      endAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/ding.mp3",
-      duration: 5000,
-    });
-
-const footer = document.createElement("footer");
-footer.className = "mt-8 mb-4";
-const footerContent = document.createElement("div");
-footerContent.className = "flex items-center justify-between";
-footer.appendChild(footerContent);
-
-const copyright = document.createElement("div");
-copyright.className = "hidden md:flex";
-copyright.innerHTML = '&nbsp;&nbsp;&copy; ' + (new Date().getFullYear()) + ' Tobias Wilhelm';
-footerContent.appendChild(copyright);
-
-const madeWith = document.createElement("div");
-madeWith.className = "hidden md:flex";
-madeWith.innerHTML = 'Imagined by Me - Realized with AI 🧠';
-footerContent.appendChild(madeWith);
-
-const elevatorBtnDiv = document.createElement("div");
-elevatorBtnDiv.innerHTML = 'You need an elevator ride?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
-elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
-elevatorBtnDiv.onclick = () => {
-  elevator.elevate();
-};
-
-footerContent.appendChild(elevatorBtnDiv);
-document.body.appendChild(footer);
-  </script>
-    <style>
-      @keyframes pulsate {
-        0% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-        50% {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-      }
-      #scroll-down-btn i {
-        animation: pulsate 1.5s linear infinite;
-      }
-    </style>
-    <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
-      <i class="fa-solid fa-v"></i>
-    </button>
-    <script>
-      const scrollDownBtn = document.getElementById('scroll-down-btn');
-      const headerContainer = document.getElementById('header-container');
-
-      const toggleScrollButtonVisibility = () => {
-        if (window.pageYOffset === 0) {
-          scrollDownBtn.style.display = 'flex';
-        } else {
-          scrollDownBtn.style.display = 'none';
-        }
-      }
-
-      scrollDownBtn.addEventListener('click', () => {
-        const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
-        window.scrollTo({top: yOffset, behavior: 'smooth'});
-      });
-
-      window.addEventListener('scroll', toggleScrollButtonVisibility);
-      toggleScrollButtonVisibility();
-    </script>
+  <footer><p>© <span id="year"></span> Sarah Jing</p><a href="#home">Back to top ↑</a></footer>
 </body>
 </html>

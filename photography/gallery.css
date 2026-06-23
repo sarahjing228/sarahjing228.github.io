@@ -1,0 +1,15 @@
+body { background: var(--bg); }
+.gallery-header { width: min(1200px, calc(100% - 2rem)); margin: 0 auto; padding: 1.25rem 0; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.gallery-header a { color: var(--muted); font-size: .82rem; font-weight: 750; text-decoration: none; }
+.gallery-shell { width: min(1200px, calc(100% - 2rem)); margin: 0 auto; padding: 5rem 0; }
+.gallery-kicker { color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.gallery-shell h1 { max-width: 850px; margin: .5rem 0 1rem; font-size: clamp(3.5rem, 9vw, 7rem); }
+.gallery-intro { max-width: 650px; margin-bottom: 3rem; color: var(--muted); font-size: 1.05rem; }
+.photo-grid { columns: 3 280px; column-gap: 1rem; }
+.photo-grid figure { margin: 0 0 1rem; break-inside: avoid; }
+.photo-grid a { display: block; overflow: hidden; border-radius: .4rem; box-shadow: var(--shadow); background: var(--surface); }
+.photo-grid img { display: block; width: 100%; height: auto; transition: transform .25s ease; }
+.photo-grid a:hover img { transform: scale(1.015); }
+.photo-grid figcaption { padding: .45rem .15rem 0; color: var(--muted); font-size: .72rem; }
+.gallery-note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+@media (max-width: 600px) { .gallery-shell { padding-top: 3.5rem; } .photo-grid { columns: 1; } }

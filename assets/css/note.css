@@ -1,0 +1,15 @@
+.note-page { background: var(--bg); }
+.note-header { width: min(820px, calc(100% - 2rem)); margin: 0 auto; padding: 1.4rem 0; display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.note-header a { color: var(--muted); text-decoration: none; font-size: .85rem; font-weight: 700; }
+.note-shell { width: min(760px, calc(100% - 2rem)); margin: 0 auto; padding: 5rem 0 8rem; }
+.note-shell h1 { font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1; margin-bottom: 1.5rem; }
+.note-shell h2 { font-family: inherit; font-size: 1.5rem; font-weight: 750; letter-spacing: -.02em; margin-top: 2.8rem; }
+.note-shell h3 { margin-top: 2rem; }
+.note-shell p, .note-shell li { color: var(--muted); font-size: 1.04rem; }
+.note-shell strong { color: var(--text); }
+.note-shell code { padding: .15rem .35rem; border-radius: 5px; background: var(--accent-soft); color: var(--text); }
+.note-shell pre { overflow-x: auto; padding: 1rem; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; }
+.note-shell pre code { padding: 0; background: transparent; }
+.note-shell blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.note-shell a { color: var(--accent); }
+.note-error { padding: 1rem; border: 1px solid var(--line); border-radius: 10px; }

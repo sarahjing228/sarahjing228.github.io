@@ -1,0 +1,9 @@
+.DS_Store
+**/.DS_Store
+*.ARW
+
+# Keep original full-resolution photographs locally; publish web-* copies.
+photography/dali-2026-04/IMG_*.jpg
+photography/dali-2026-04/IMG_*.JPG
+photography/sakura-nara-2024-05/IMG_*.jpg
+photography/sakura-nara-2024-05/IMG_*.JPG
