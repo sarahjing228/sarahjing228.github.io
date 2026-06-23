@@ -47,36 +47,9 @@
       <a class="scroll-cue" href="#about" aria-label="Continue to About">↓</a>
     </section>
 
-    <!-- EDIT HERE: This compact index keeps the original template's three-column summary layout. -->
-    <section class="section-shell home-summary reveal" aria-label="Website summary">
-      <article class="summary-column">
-        <p class="summary-icon" aria-hidden="true">⌕</p>
-        <h2>Research</h2>
-        <p class="summary-intro">Medical imaging, privacy-preserving learning, and quantitative CT analysis.</p>
-        <a href="#research"><strong>Current research interests</strong><span>Federated learning, segmentation, and musculoskeletal CT</span></a>
-        <a href="#publications"><strong>Scientific Reports</strong><span>Mortality prediction for pediatric fulminant myocarditis</span></a>
-      </article>
-      <article class="summary-column">
-        <p class="summary-icon" aria-hidden="true">✎</p>
-        <h2>Study Blog</h2>
-        <p class="summary-intro">Notes from topics I am learning and revisiting.</p>
-        <a href="posts/?note=gan-learning-notes"><strong>GANs Step by Step</strong><span>Distributions, labels, noise, and training intuition</span></a>
-        <a href="posts/?note=medical-image-segmentation"><strong>From Voxels to Meshes</strong><span>Segmentation types, geometry, and evaluation</span></a>
-        <a href="posts/?note=geometry-linear-algebra"><strong>Geometry &amp; Linear Algebra</strong><span>Transformations and visual representations</span></a>
-      </article>
-      <article class="summary-column">
-        <p class="summary-icon" aria-hidden="true">◎</p>
-        <h2>Travel &amp; Photography</h2>
-        <p class="summary-intro">Places, food, light, and small observations collected along the way.</p>
-        <a href="travel/sicily-diary.html"><strong>Sicily Diary</strong><span>Marsala, regional pasta, and Mediterranean streets</span></a>
-        <a href="photography/strasbourg-2025-12/"><strong>Strasbourg at Christmas</strong><span>Winter lights and festive streets</span></a>
-        <a href="photography/dali-2026-04/"><strong>Dali · Yunnan</strong><span>Lake views, mountains, and quiet moments</span></a>
-      </article>
-    </section>
-
     <section id="about" class="section-shell split-section reveal">
       <div>
-        <p class="section-label">01 · About</p>
+        <p class="section-label">About</p>
         <h2>Curious about images, geometry, and how machines learn from both.</h2>
       </div>
       <div class="prose">
@@ -89,9 +62,46 @@
       </div>
     </section>
 
+    <!-- EDIT HERE: This compact index keeps the original template's three-column summary layout. -->
+    <section class="section-shell home-summary reveal" aria-label="Website summary">
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">⌕</p>
+        <h2>Research</h2>
+        <p class="summary-intro">Medical imaging, privacy-preserving learning, and quantitative CT analysis.</p>
+        <div class="summary-list">
+          <a href="#research"><strong>Current research interests</strong><span>Federated learning, segmentation, and musculoskeletal CT</span></a>
+          <a href="#publications"><strong>Scientific Reports</strong><span>Mortality prediction for pediatric fulminant myocarditis</span></a>
+          <a class="summary-extra" href="#experience" hidden><strong>Experience &amp; education</strong><span>NAIST, KIT, Osaka University, and Waterloo</span></a>
+        </div>
+        <button class="show-more" type="button" aria-expanded="false">➕ Show more</button>
+      </article>
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">✎</p>
+        <h2>Study Blog</h2>
+        <p class="summary-intro">Notes from topics I am learning and revisiting.</p>
+        <div class="summary-list">
+          <a href="posts/?note=gan-learning-notes"><strong>GANs Step by Step</strong><span>Distributions, labels, noise, and training intuition</span></a>
+          <a href="posts/?note=medical-image-segmentation"><strong>From Voxels to Meshes</strong><span>Segmentation types, geometry, and evaluation</span></a>
+          <a class="summary-extra" href="posts/?note=geometry-linear-algebra" hidden><strong>Geometry &amp; Linear Algebra</strong><span>Transformations and visual representations</span></a>
+        </div>
+        <button class="show-more" type="button" aria-expanded="false">➕ Show more</button>
+      </article>
+      <article class="summary-column">
+        <p class="summary-icon" aria-hidden="true">◎</p>
+        <h2>Travel &amp; Photography</h2>
+        <p class="summary-intro">Places, food, light, and small observations collected along the way.</p>
+        <div class="summary-list">
+          <a href="travel/sicily-diary.html"><strong>Sicily Diary</strong><span>Marsala, regional pasta, and Mediterranean streets</span></a>
+          <a href="photography/strasbourg-2025-12/"><strong>Strasbourg at Christmas</strong><span>Winter lights and festive streets</span></a>
+          <a class="summary-extra" href="photography/dali-2026-04/" hidden><strong>Dali · Yunnan</strong><span>Lake views, mountains, and quiet moments</span></a>
+        </div>
+        <button class="show-more" type="button" aria-expanded="false">➕ Show more</button>
+      </article>
+    </section>
+
     <section id="experience" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">02 · Experience & Education</p><h2>The path to my current research</h2></div>
+        <div><p class="section-label">Experience & Education</p><h2>The path to my current research</h2></div>
         <p>Medical imaging, mathematics, data science, and visual computing across four universities.</p>
       </div>
       <!-- EDIT HERE: Update dates, descriptions, and school badges as your experience grows. -->
@@ -106,7 +116,7 @@
 
     <section id="news" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">03 · News</p><h2>Recent updates</h2></div>
+        <div><p class="section-label">News</p><h2>Recent updates</h2></div>
         <p>A small log of research and academic milestones.</p>
       </div>
       <!-- EDIT HERE: Add new items at the top of this list. -->
@@ -118,20 +128,20 @@
 
     <section id="research" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">04 · Research</p><h2>Research interests</h2></div>
+        <div><p class="section-label">Research</p><h2>Research interests</h2></div>
         <p>Methods and applications at the intersection of machine learning and medical imaging.</p>
       </div>
       <!-- EDIT HERE: Add or revise research themes. -->
       <div class="card-grid research-grid">
-        <article class="card"><span class="card-number">01</span><h3>Federated Learning</h3><p>Privacy-aware collaboration across distributed clinical datasets, with attention to domain shift and robust evaluation.</p></article>
-        <article class="card"><span class="card-number">02</span><h3>Musculoskeletal CT</h3><p>Automatic segmentation and quantitative analysis of muscle, fat, bone, and related anatomical structures in CT.</p></article>
-        <article class="card"><span class="card-number">03</span><h3>Imaging, Geometry & Rendering</h3><p>Segmentation, denoising, surface reconstruction, and an emerging interest in ray tracing and geometric representations.</p></article>
+        <article class="card"><span class="card-number">Method</span><h3>Federated Learning</h3><p>Privacy-aware collaboration across distributed clinical datasets, with attention to domain shift and robust evaluation.</p></article>
+        <article class="card"><span class="card-number">Application</span><h3>Musculoskeletal CT</h3><p>Automatic segmentation and quantitative analysis of muscle, fat, bone, and related anatomical structures in CT.</p></article>
+        <article class="card"><span class="card-number">Geometry</span><h3>Imaging, Geometry & Rendering</h3><p>Segmentation, denoising, surface reconstruction, and an emerging interest in ray tracing and geometric representations.</p></article>
       </div>
     </section>
 
     <section id="publications" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">05 · Publications</p><h2>Selected work</h2></div>
+        <div><p class="section-label">Publications</p><h2>Selected work</h2></div>
       </div>
       <!-- EDIT HERE: Replace this placeholder with publication citations and links. -->
       <div class="publication-panel">
@@ -148,7 +158,7 @@
 
     <section id="study-blog" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">06 · Study Blog</p><h2>Learning in public</h2></div>
+        <div><p class="section-label">Study Blog</p><h2>Learning in public</h2></div>
         <p>Working notes on ideas, papers, and tools I want to understand more deeply.</p>
       </div>
       <!-- EDIT HERE: Add a card when you add a Markdown file to posts/. -->
@@ -161,19 +171,19 @@
 
     <section id="travel" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">07 · Travel Diary</p><h2>Notes from elsewhere</h2></div>
+        <div><p class="section-label">Travel Diary</p><h2>Notes from elsewhere</h2></div>
         <p>Places, details, and small moments worth remembering.</p>
       </div>
       <!-- EDIT HERE: Add diary cards and place photos in assets/images/travel/. -->
       <div class="card-grid travel-grid">
-        <a class="travel-card sicily-card" href="travel/sicily-diary.html"><span>01</span><div><p>Sicily, Italy</p><h3>Stone streets, warm light, and the Mediterranean</h3><small>Read diary →</small></div></a>
-        <a class="travel-card japan-card" href="travel/japan-diary.html"><span>02</span><div><p>Japan</p><h3>Everyday scenes, quiet lanes, and changing seasons</h3><small>Read diary →</small></div></a>
+        <a class="travel-card sicily-card" href="travel/sicily-diary.html"><span>Sicily</span><div><p>Sicily, Italy</p><h3>Stone streets, warm light, and the Mediterranean</h3><small>Read diary →</small></div></a>
+        <a class="travel-card japan-card" href="travel/japan-diary.html"><span>Japan</span><div><p>Japan</p><h3>Everyday scenes, quiet lanes, and changing seasons</h3><small>Read diary →</small></div></a>
       </div>
     </section>
 
     <section id="photography" class="section-shell reveal">
       <div class="section-heading">
-        <div><p class="section-label">08 · Photography</p><h2>Light, place, and ordinary moments</h2></div>
+        <div><p class="section-label">Photography</p><h2>Light, place, and ordinary moments</h2></div>
         <p>A growing visual notebook. These album spaces are ready for photographs I will add later.</p>
       </div>
       <!-- EDIT HERE: Replace album placeholders with photographs and links as each collection grows. -->
@@ -186,7 +196,7 @@
     </section>
 
     <section id="contact" class="section-shell contact-section reveal">
-      <p class="section-label">09 · Contact</p>
+      <p class="section-label">Contact</p>
       <h2>Let’s talk about medical imaging, federated learning, or a possible collaboration.</h2>
       <!-- EDIT HERE: Update email and profile links. -->
       <div class="contact-links">

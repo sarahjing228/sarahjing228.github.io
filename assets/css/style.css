@@ -34,7 +34,7 @@ body {
   transition: color .2s, background .2s;
 }
 a { color: inherit; }
-#particles { position: fixed; inset: 0; z-index: -1; width: 100%; height: 100%; opacity: .65; }
+#particles { position: fixed; inset: 0; z-index: -1; width: 100%; height: 100%; opacity: .85; }
 
 /* Original-template style: a small top bar, not a large editorial header. */
 .site-header {
@@ -108,6 +108,21 @@ h1 {
 .summary-column strong, .summary-column span { display: block; }
 .summary-column strong { font-size: .9rem; }
 .summary-column span { margin-top: .15rem; color: var(--muted); font-size: .75rem; }
+[hidden] { display: none !important; }
+.summary-extra { display: block; }
+.summary-column.expanded .summary-extra { display: block !important; }
+.show-more {
+  margin-top: .85rem;
+  padding: .45rem .65rem;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: .3rem;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.show-more:hover { color: var(--accent); background: var(--surface-hover); }
 
 h2 { margin: .35rem 0 0; font-family: inherit; font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 750; line-height: 1.15; letter-spacing: -.025em; }
 h3 { margin: .6rem 0; font-size: 1.12rem; line-height: 1.3; }

@@ -31,6 +31,18 @@
     menuButton.setAttribute('aria-expanded', 'false');
   });
 
+  document.querySelectorAll('.summary-column .show-more').forEach((button) => {
+    button.addEventListener('click', () => {
+      const column = button.closest('.summary-column');
+      const expanded = column.classList.toggle('expanded');
+      column.querySelectorAll('.summary-extra').forEach((item) => {
+        item.hidden = !expanded;
+      });
+      button.textContent = expanded ? '− Show less' : '➕ Show more';
+      button.setAttribute('aria-expanded', String(expanded));
+    });
+  });
+
   document.querySelector('#year').textContent = new Date().getFullYear();
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('visible'));
@@ -49,20 +61,20 @@
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    const count = Math.min(70, Math.floor(window.innerWidth / 18));
+    const count = Math.min(80, Math.floor(window.innerWidth / 16));
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      vx: (Math.random() - .5) * .18,
-      vy: (Math.random() - .5) * .18,
-      r: Math.random() * 1.5 + .5
+      vx: (Math.random() - .5) * .55,
+      vy: (Math.random() - .5) * .55,
+      r: Math.random() * 2.2 + .7
     }));
   }
   function draw() {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     const dark = root.dataset.theme === 'dark';
-    context.fillStyle = dark ? 'rgba(240,141,177,.42)' : 'rgba(201,79,124,.28)';
-    context.strokeStyle = dark ? 'rgba(240,141,177,.08)' : 'rgba(201,79,124,.07)';
+    context.fillStyle = dark ? 'rgba(180,180,180,.45)' : 'rgba(136,136,136,.50)';
+    context.strokeStyle = dark ? 'rgba(180,180,180,.18)' : 'rgba(136,136,136,.25)';
     particles.forEach((particle, index) => {
       if (!reduceMotion) {
         particle.x = (particle.x + particle.vx + window.innerWidth) % window.innerWidth;
@@ -71,7 +83,7 @@
       context.beginPath(); context.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2); context.fill();
       particles.slice(index + 1).forEach((other) => {
         const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
-        if (distance < 110) { context.beginPath(); context.moveTo(particle.x, particle.y); context.lineTo(other.x, other.y); context.stroke(); }
+        if (distance < 150) { context.beginPath(); context.moveTo(particle.x, particle.y); context.lineTo(other.x, other.y); context.stroke(); }
       });
     });
     if (!reduceMotion) requestAnimationFrame(draw);
