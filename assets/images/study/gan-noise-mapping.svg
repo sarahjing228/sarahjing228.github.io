@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Toy graph of noise mapped by the generator</title>
+  <desc id="desc">Random latent noise is transformed by the generator into structured samples.</desc>
+  <rect width="760" height="430" rx="28" fill="#0f172a"/>
+  <text x="92" y="52" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Noise is the starting code</text>
+  <g fill="#5eead4" opacity=".9">
+    <circle cx="125" cy="150" r="8"/><circle cx="165" cy="116" r="6"/><circle cx="190" cy="175" r="7"/><circle cx="235" cy="132" r="5"/><circle cx="255" cy="202" r="7"/>
+    <circle cx="140" cy="236" r="5"/><circle cx="218" cy="250" r="8"/><circle cx="270" cy="276" r="5"/>
+  </g>
+  <text x="115" y="330" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">latent noise z</text>
+  <path d="M320 205 C370 130 425 130 475 205 C425 280 370 280 320 205Z" fill="#172554" stroke="#60a5fa" stroke-width="4"/>
+  <text x="365" y="211" fill="#dbeafe" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">G</text>
+  <text x="333" y="252" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="14">generator</text>
+  <path d="M286 205 H318" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M475 205 H510" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M505 196 L522 205 L505 214" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="none" stroke="#f97316" stroke-width="4">
+    <path d="M575 240 C555 205 568 155 615 143 C662 131 696 168 690 211 C684 253 625 278 575 240Z" fill="#431407"/>
+    <path d="M600 164 C618 191 649 192 668 169"/>
+    <path d="M586 224 C625 203 657 207 681 231"/>
+  </g>
+  <text x="556" y="330" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">structured sample G(z)</text>
+  <text x="92" y="389" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">In a standard GAN, noise is not added to a real image; it is transformed into a fake sample.</text>
+</svg>

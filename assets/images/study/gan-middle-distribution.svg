@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Middle GAN training distribution graph</title>
+  <desc id="desc">Generated distribution overlaps with the real distribution during middle training.</desc>
+  <rect width="760" height="430" rx="28" fill="#0f172a"/>
+  <g stroke="#334155" stroke-width="1">
+    <line x1="80" y1="350" x2="700" y2="350"/>
+    <line x1="80" y1="70" x2="80" y2="350"/>
+  </g>
+  <text x="92" y="48" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Middle stage</text>
+  <path d="M115 350 C155 342 175 304 210 215 C250 114 310 112 350 196 C385 268 420 331 470 350" fill="none" stroke="#5eead4" stroke-width="5"/>
+  <path d="M220 350 C255 338 280 305 315 226 C355 132 415 132 455 218 C490 292 530 337 585 350" fill="none" stroke="#f97316" stroke-width="5"/>
+  <path d="M275 350 C305 310 335 235 367 188 C397 235 425 306 458 350" fill="#5eead4" opacity=".14"/>
+  <text x="158" y="92" fill="#5eead4" font-family="Inter, Arial, sans-serif" font-size="17">real</text>
+  <text x="495" y="92" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="17">generated</text>
+  <text x="92" y="388" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">overlap increases, but the discriminator still sees differences</text>
+  <text x="92" y="407" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">Training gradients move generated samples toward denser real-data regions.</text>
+</svg>

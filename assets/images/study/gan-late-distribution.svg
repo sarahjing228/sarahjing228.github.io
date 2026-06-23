@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Late GAN training distribution graph</title>
+  <desc id="desc">Generated and real distributions nearly match in late training.</desc>
+  <rect width="760" height="430" rx="28" fill="#0f172a"/>
+  <g stroke="#334155" stroke-width="1">
+    <line x1="80" y1="350" x2="700" y2="350"/>
+    <line x1="80" y1="70" x2="80" y2="350"/>
+  </g>
+  <text x="92" y="48" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Late stage</text>
+  <path d="M130 350 C165 342 188 305 225 214 C267 112 326 114 366 196 C402 270 440 333 492 350" fill="none" stroke="#5eead4" stroke-width="7"/>
+  <path d="M135 350 C170 341 194 310 230 220 C273 121 330 121 371 201 C407 273 447 334 497 350" fill="none" stroke="#f97316" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="180" y="96" fill="#5eead4" font-family="Inter, Arial, sans-serif" font-size="17">real data</text>
+  <text x="418" y="96" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="17">generated data</text>
+  <text x="92" y="388" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">when the two distributions match, an ideal discriminator becomes uncertain</text>
+  <text x="92" y="407" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">The theoretical endpoint is p_G = p_data and D(x) = 1/2.</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Binary cross entropy graph for real and fake labels</title>
+  <desc id="desc">Loss for y equals 1 decreases when predicted probability approaches 1; loss for y equals 0 decreases when predicted probability approaches 0.</desc>
+  <rect width="760" height="430" rx="28" fill="#0f172a"/>
+  <g stroke="#334155" stroke-width="1">
+    <line x1="82" y1="350" x2="700" y2="350"/>
+    <line x1="82" y1="70" x2="82" y2="350"/>
+  </g>
+  <text x="92" y="48" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Binary cross-entropy</text>
+  <text x="650" y="384" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">D(x)</text>
+  <text x="42" y="82" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">loss</text>
+  <path d="M105 88 C140 140 180 193 230 240 C305 312 410 344 675 350" fill="none" stroke="#5eead4" stroke-width="5"/>
+  <path d="M105 350 C350 344 470 312 545 240 C595 193 635 140 675 88" fill="none" stroke="#f97316" stroke-width="5"/>
+  <text x="462" y="150" fill="#5eead4" font-family="Inter, Arial, sans-serif" font-size="17">real label y = 1: -log(D(x))</text>
+  <text x="112" y="290" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="17">fake label y = 0: -log(1 - D(x))</text>
+  <text x="92" y="407" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">Real samples are rewarded near 1. Fake samples are rewarded near 0.</text>
+</svg>

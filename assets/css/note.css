@@ -10,6 +10,7 @@
 .note-shell code { padding: .15rem .35rem; border-radius: 5px; background: var(--accent-soft); color: var(--text); }
 .note-shell pre { overflow-x: auto; padding: 1rem; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; }
 .note-shell pre code { padding: 0; background: transparent; }
+.note-shell img { display: block; width: 100%; height: auto; margin: 1.4rem 0 1.8rem; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); background: var(--surface); }
 .note-shell blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
 .note-shell a { color: var(--accent); }
 .note-error { padding: 1rem; border: 1px solid var(--line); border-radius: 10px; }

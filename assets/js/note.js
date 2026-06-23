@@ -15,6 +15,7 @@ function escapeHtml(value) {
 // Intentionally small Markdown renderer for locally authored study notes.
 function inline(text) {
   return escapeHtml(text)
+    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1">')
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')

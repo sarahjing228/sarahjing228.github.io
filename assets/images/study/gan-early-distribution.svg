@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Early GAN training distribution graph</title>
+  <desc id="desc">Real data distribution and generated distribution are far apart in early training.</desc>
+  <rect width="760" height="430" rx="28" fill="#0f172a"/>
+  <g stroke="#334155" stroke-width="1">
+    <line x1="80" y1="350" x2="700" y2="350"/>
+    <line x1="80" y1="70" x2="80" y2="350"/>
+  </g>
+  <text x="92" y="48" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">Early stage</text>
+  <text x="92" y="388" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="15">sample space x</text>
+  <path d="M95 350 C130 342 145 305 175 221 C210 120 260 110 295 190 C325 260 350 327 400 350" fill="none" stroke="#5eead4" stroke-width="5"/>
+  <path d="M365 350 C405 342 425 312 455 230 C495 120 555 132 585 224 C615 307 646 338 690 350" fill="none" stroke="#f97316" stroke-width="5"/>
+  <circle cx="245" cy="150" r="6" fill="#5eead4"/>
+  <circle cx="525" cy="151" r="6" fill="#f97316"/>
+  <text x="165" y="93" fill="#5eead4" font-family="Inter, Arial, sans-serif" font-size="17">real data distribution</text>
+  <text x="455" y="94" fill="#f97316" font-family="Inter, Arial, sans-serif" font-size="17">generated distribution</text>
+  <text x="92" y="407" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="13">At the beginning, the generator is random, so fake samples occupy the wrong region.</text>
+</svg>
