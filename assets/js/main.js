@@ -84,11 +84,6 @@
           initial: { fill: '#db2777', stroke: '#ffffff', strokeWidth: 3, r: 7 },
           hover: { fill: '#f472b6', stroke: '#ffffff', strokeWidth: 3, r: 9 }
         },
-        labels: {
-          markers: {
-            render(marker) { return marker.name; }
-          }
-        },
         onMarkerClick(event, index) {
           activatePlace(academicMarkers[index].place);
         }
