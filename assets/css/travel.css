@@ -10,6 +10,11 @@
 .diary-shell article { width: min(680px, 100%); margin: 0 auto; }
 .diary-shell article p { color: var(--muted); font-size: 1.08rem; }
 .diary-shell article h2 { font-family: inherit; font-size: 1.5rem; font-weight: 750; margin-top: 3rem; }
+.diary-gallery { width: min(920px, 100%); margin: 3rem auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.diary-gallery figure { margin: 0; }
+.diary-gallery img { width: 100%; height: 100%; min-height: 260px; display: block; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow); }
+.diary-gallery figcaption { text-align: left; padding: .3rem .15rem 0; }
 .diary-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 6rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .diary-nav a { color: var(--accent); font-weight: 750; text-decoration: none; }
-@media (max-width: 600px) { .diary-shell { padding-top: 4rem; } .diary-shell figure { margin: 2.5rem 0; } .diary-photo { min-height: 300px; } }
+@media (max-width: 800px) { .diary-gallery { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .diary-shell { padding-top: 4rem; } .diary-shell figure { margin: 2.5rem 0; } .diary-photo { min-height: 300px; } .diary-gallery figure { margin: 0; } }

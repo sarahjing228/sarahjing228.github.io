@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Suzuka Formula 1 placeholder</title>
+  <desc id="desc">A stylized dark racing circuit with red lights and autumn-toned gradients for a Suzuka Japanese Grand Prix travel diary placeholder.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset=".5" stop-color="#2d2330"/>
+      <stop offset="1" stop-color="#5b2436"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="22%" r="48%">
+      <stop offset="0" stop-color="#f472b6" stop-opacity=".55"/>
+      <stop offset=".42" stop-color="#db2777" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#111" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <g opacity=".2">
+    <path d="M0 720 C280 610 430 640 650 700 C930 778 1180 725 1600 560" fill="none" stroke="#fff" stroke-width="2"/>
+    <path d="M0 800 C310 682 515 720 745 785 C980 852 1225 820 1600 680" fill="none" stroke="#fff" stroke-width="2"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <path d="M205 690 C315 455 515 328 742 348 C901 363 952 456 912 553 C875 643 973 720 1120 664 C1276 605 1374 417 1290 320 C1219 238 1070 246 967 324" fill="none" stroke="#f5f5f5" stroke-width="64" stroke-linecap="round"/>
+    <path d="M205 690 C315 455 515 328 742 348 C901 363 952 456 912 553 C875 643 973 720 1120 664 C1276 605 1374 417 1290 320 C1219 238 1070 246 967 324" fill="none" stroke="#151515" stroke-width="46" stroke-linecap="round"/>
+    <path d="M205 690 C315 455 515 328 742 348 C901 363 952 456 912 553 C875 643 973 720 1120 664 C1276 605 1374 417 1290 320 C1219 238 1070 246 967 324" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="34 32" stroke-linecap="round" opacity=".88"/>
+  </g>
+  <g transform="translate(1080 120)">
+    <rect x="0" y="0" width="310" height="92" rx="28" fill="#101010" opacity=".9"/>
+    <circle cx="60" cy="46" r="20" fill="#ef4444"/>
+    <circle cx="122" cy="46" r="20" fill="#ef4444" opacity=".78"/>
+    <circle cx="184" cy="46" r="20" fill="#ef4444" opacity=".54"/>
+    <circle cx="246" cy="46" r="20" fill="#ef4444" opacity=".3"/>
+  </g>
+  <g transform="translate(120 128)">
+    <text x="0" y="0" fill="#fff" font-family="Iowan Old Style, Georgia, serif" font-size="92" font-weight="700">Suzuka</text>
+    <text x="4" y="70" fill="#fbcfe8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="5">JAPAN F1 GP · 2024</text>
+  </g>
+  <g transform="translate(1040 750)" fill="#fff" opacity=".72" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    <text x="0" y="0" font-size="24" font-weight="700">temporary visual</text>
+    <text x="0" y="38" font-size="18">replace with personal race photos later</text>
+  </g>
+</svg>
