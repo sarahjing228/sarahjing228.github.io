@@ -2,7 +2,8 @@
 const availableNotes = new Set([
   'gan-learning-notes',
   'medical-image-segmentation',
-  'geometry-linear-algebra'
+  'geometry-linear-algebra',
+  'variational-image-segmentation'
 ]);
 
 const noteRoot = document.querySelector('#note');

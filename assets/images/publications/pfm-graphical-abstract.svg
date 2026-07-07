@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">Graphical abstract for mortality prediction in pediatric fulminant myocarditis</title>
+  <desc id="desc">Demographic and clinical information plus blood cytokine profiles are combined into a patient feature table, processed by a machine-learning classifier, and used to classify mortality and survival groups while ranking important features.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff6fb"/>
+      <stop offset=".55" stop-color="#f9fbff"/>
+      <stop offset="1" stop-color="#edf8ff"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8a8c8"/>
+      <stop offset="1" stop-color="#d869a4"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop offset="0" stop-color="#a7dcff"/>
+      <stop offset="1" stop-color="#5ba9e8"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" x2="1">
+      <stop offset="0" stop-color="#b8a2f0"/>
+      <stop offset="1" stop-color="#8f70d9"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1d2030" flood-opacity=".14"/>
+    </filter>
+    <style>
+      .label{font:750 25px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#273044}
+      .small{font:500 17px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#5b6372}
+      .tiny{font:650 14px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#697082}
+      .micro{font:650 12px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#fff}
+      .card{fill:#fff;stroke:#eadfe8;stroke-width:1.35;filter:url(#shadow)}
+      .arrow{fill:none;stroke:#d874aa;stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect width="1120" height="620" rx="34" fill="url(#bg)"/>
+  <text x="50" y="58" class="label">Mortality prediction for pediatric fulminant myocarditis</text>
+  <text x="50" y="88" class="small">Blood cytokine profiles + demographic / clinical information → machine-learning classification</text>
+
+  <g transform="translate(42 138)">
+    <rect class="card" width="235" height="260" rx="24"/>
+    <circle cx="62" cy="64" r="34" fill="#e8f4ff"/>
+    <path d="M48 58c0-16 9-27 22-27s22 11 22 27c0 14-8 24-22 24s-22-10-22-24z" fill="url(#blue)"/>
+    <path d="M32 114c8-28 68-28 76 0" fill="none" stroke="#5ba9e8" stroke-width="12" stroke-linecap="round"/>
+    <text x="26" y="145" class="label">Demographic</text>
+    <text x="26" y="174" class="label">&amp; clinical data</text>
+    <text x="26" y="210" class="small">age · sex · diagnosis</text>
+    <text x="26" y="236" class="small">severity · treatment context</text>
+  </g>
+
+  <g transform="translate(314 138)">
+    <rect class="card" width="235" height="260" rx="24"/>
+    <circle cx="62" cy="64" r="34" fill="#ffe4ef"/>
+    <path d="M62 32c17 18 30 34 30 54a30 30 0 0 1-60 0c0-20 13-36 30-54z" fill="url(#pink)"/>
+    <path d="M51 85h22M62 74v22" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <text x="26" y="145" class="label">Cytokines</text>
+    <text x="26" y="174" class="label">from blood</text>
+    <text x="26" y="210" class="small">TNF-α · IL-6 · IL-8</text>
+    <text x="26" y="236" class="small">IP-10 · MIP-1α · M-CSF</text>
+  </g>
+
+  <g transform="translate(78 438)">
+    <rect width="420" height="92" rx="18" fill="#ffffff" stroke="#eadfe8"/>
+    <text x="22" y="34" class="tiny">Patient-level feature table</text>
+    <g transform="translate(22 48)">
+      <rect width="368" height="26" rx="8" fill="#f7fbff" stroke="#d8e6f2"/>
+      <path d="M52 0v26M104 0v26M156 0v26M208 0v26M260 0v26M312 0v26" stroke="#d8e6f2"/>
+      <circle cx="26" cy="13" r="5" fill="#5ba9e8"/>
+      <circle cx="78" cy="13" r="5" fill="#8f70d9"/>
+      <circle cx="130" cy="13" r="5" fill="#d869a4"/>
+      <circle cx="182" cy="13" r="5" fill="#f8a8c8"/>
+      <circle cx="234" cy="13" r="5" fill="#77bee8"/>
+      <circle cx="286" cy="13" r="5" fill="#d874aa"/>
+      <circle cx="338" cy="13" r="5" fill="#9c84dd"/>
+    </g>
+  </g>
+
+  <path class="arrow" d="M276 268h32"/>
+  <path class="arrow" d="M302 252l16 16-16 16"/>
+  <path class="arrow" d="M548 268h54"/>
+  <path class="arrow" d="M594 252l18 16-18 16"/>
+
+  <g transform="translate(632 138)">
+    <rect class="card" width="210" height="260" rx="24"/>
+    <circle cx="58" cy="64" r="34" fill="#f2ecff"/>
+    <path d="M36 54h44M36 76h44M46 36v60M70 36v60" stroke="url(#purple)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="36" cy="54" r="8" fill="#8f70d9"/>
+    <circle cx="80" cy="54" r="8" fill="#d869a4"/>
+    <circle cx="36" cy="76" r="8" fill="#5ba9e8"/>
+    <circle cx="80" cy="76" r="8" fill="#f8a8c8"/>
+    <text x="24" y="145" class="label">Machine</text>
+    <text x="24" y="174" class="label">learning</text>
+    <text x="24" y="210" class="small">classification model</text>
+    <text x="24" y="236" class="small">trained on patient features</text>
+  </g>
+
+  <path class="arrow" d="M844 268h48"/>
+  <path class="arrow" d="M884 252l18 16-18 16"/>
+
+  <g transform="translate(918 116)">
+    <rect class="card" width="160" height="132" rx="22"/>
+    <text x="24" y="42" class="label">Outcome</text>
+    <g transform="translate(24 64)">
+      <rect width="112" height="24" rx="12" fill="#e9f6ff"/>
+      <circle cx="18" cy="12" r="7" fill="#5ba9e8"/>
+      <text x="34" y="17" class="tiny">Survival</text>
+      <rect y="38" width="112" height="24" rx="12" fill="#ffeaf2"/>
+      <circle cx="18" cy="50" r="7" fill="#d869a4"/>
+      <text x="34" y="55" class="tiny">Mortality</text>
+    </g>
+  </g>
+
+  <g transform="translate(886 292)">
+    <rect class="card" width="220" height="208" rx="24"/>
+    <text x="24" y="44" class="label">Important</text>
+    <text x="24" y="73" class="label">features</text>
+    <g transform="translate(24 100)">
+      <text x="0" y="0" class="tiny">VIP / feature ranking</text>
+      <rect y="18" width="150" height="16" rx="8" fill="url(#pink)"/>
+      <text x="158" y="31" class="tiny">TNF-α</text>
+      <rect y="48" width="128" height="16" rx="8" fill="#f0a1c3"/>
+      <text x="136" y="61" class="tiny">MIP-1α</text>
+      <rect y="78" width="112" height="16" rx="8" fill="#92cef3"/>
+      <text x="120" y="91" class="tiny">IL-8</text>
+    </g>
+  </g>
+
+  <path class="arrow" d="M738 398c42 54 92 68 142 50"/>
+  <path class="arrow" d="M862 438l23 8-14 21"/>
+
+  <text x="50" y="580" class="tiny">Conceptual website illustration based on the published study: multimodal patient features support mortality/survival classification and feature-importance analysis.</text>
+</svg>
