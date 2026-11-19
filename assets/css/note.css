@@ -14,3 +14,8 @@
 .note-shell blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--accent); }
 .note-shell a { color: var(--accent); }
 .note-error { padding: 1rem; border: 1px solid var(--line); border-radius: 10px; }
+
+.math-display { overflow-x: auto; padding: .5rem 0; margin: 1.2rem 0; }
+.note-shell mjx-container { color: var(--text); }
+
+.note-shell.long-title h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; }
