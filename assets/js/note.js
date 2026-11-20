@@ -37,7 +37,26 @@ function markdownToHtml(markdown) {
   let code = false;
   let displayMath = null;
   const closeList = () => { if (list) { output.push(`</${list}>`); list = null; } };
-  lines.forEach((line) => {
+  let tableEnd = -1;
+  const cells = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((cell) => cell.trim());
+  lines.forEach((line, index) => {
+    if (index <= tableEnd) return;
+    if (!code && !displayMath && line.trim().startsWith('|') &&
+        lines[index + 1] && /^\|?\s*:?-{3,}/.test(lines[index + 1].trim()) &&
+        cells(lines[index + 1]).every((cell) => /^:?-{3,}:?$/.test(cell))) {
+      closeList();
+      const headers = cells(line);
+      const rows = [];
+      tableEnd = index + 1;
+      while (lines[tableEnd + 1] && lines[tableEnd + 1].trim().startsWith('|')) {
+        rows.push(cells(lines[++tableEnd]));
+      }
+      output.push('<div class="note-table" tabindex="0" role="region" aria-label="Comparison table"><table><thead><tr>' +
+        headers.map((cell) => `<th scope="col">${inline(cell)}</th>`).join('') + '</tr></thead><tbody>' +
+        rows.map((row) => '<tr>' + headers.map((_, column) => `<td>${inline(row[column] || '')}</td>`).join('') + '</tr>').join('') +
+        '</tbody></table></div>');
+      return;
+    }
     if (!code && line.trim() === '\\[') { closeList(); displayMath = [line]; return; }
     if (displayMath) {
       displayMath.push(line);

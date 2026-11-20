@@ -19,3 +19,12 @@
 .note-shell mjx-container { color: var(--text); }
 
 .note-shell.long-title h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; }
+
+.note-table { overflow-x: auto; margin: 1.5rem 0 2rem; border: 1px solid var(--line); border-radius: 10px; }
+.note-table table { width: 100%; min-width: 660px; border-collapse: collapse; font-size: 1rem; line-height: 1.6; }
+.note-table th, .note-table td { padding: .85rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.note-table th { background: var(--accent-soft); color: var(--text); font-weight: 700; }
+.note-table td { color: var(--muted); }
+.note-table td:first-child { color: var(--text); font-weight: 600; }
+.note-table tr:last-child td { border-bottom: 0; }
+.note-table:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
